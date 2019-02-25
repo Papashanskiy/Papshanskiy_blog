@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Post{% endblock %}
+
+{% block h1 %}{{ post['title'] }}{% endblock %}
+
+{% block h2 %}{{ post['title'] }}{% endblock %}
+
+{% block meta %}Posted by {{ post['author'] }} on {{ post.date_post.strftime('%B %d, %Y') }}{% endblock %}
+
+{% block page_content %}
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ post['content']|safe }}
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}

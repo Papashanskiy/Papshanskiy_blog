@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}New post{% endblock %}
+
+{% block page_content %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('{{ url_for('static', filename='main-bg.jpg') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>New post</h1>
+                        <hr class="small">
+                        <span class="subheading">You can create a new post hear.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <form name="new_post" id="postForm" method="POST" action="{{ url_for('addpost') }}" novalidate>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Title</label>
+                            <input type="text" class="form-control" placeholder="Title" name="title" id="title" required data-validation-required-message="Please enter title.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Subtitle</label>
+                            <input type="text" class="form-control" placeholder="Subtitle" name="subtitle" id="subtitle" required data-validation-required-message="Please enter subtitle.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Author</label>
+                            <input type="text" class="form-control" placeholder="Author" name="author" id="author" required data-validation-required-message="Please enter your nickname.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Post content</label>
+                            <textarea rows="7" class="form-control" placeholder="Post content" name="content" id="content" required data-validation-required-message="Please enter a content."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-default">Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

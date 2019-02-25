@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block h1 %}You are welcome!{% endblock %}
+
+{% block h2 %}This is my little blog{% endblock %}
+
+{% block page_content %}
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% for post in posts %}
+                <div class="post-preview">
+                    <a href="{{ url_for('post', post_id=post.id) }}">
+                        <h2 class="post-title">
+                            {{ post.title }}
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{ post.sub_title }}
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by {{ post.author }} on {{ post.date_post.strftime('%B %d, %Y') }}</p>
+                </div>
+                <hr>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
