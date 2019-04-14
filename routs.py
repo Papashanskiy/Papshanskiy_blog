@@ -1,4 +1,4 @@
-from app import app, db
+from __init__ import app, db
 from models import Post
 from flask import render_template, request, redirect, url_for, flash, send_file, send_from_directory
 import datetime, os
