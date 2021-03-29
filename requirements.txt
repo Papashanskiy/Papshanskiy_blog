@@ -28,7 +28,7 @@ Mako==1.0.7
 MarkupSafe==1.0
 mysql-connector-python==8.0.13
 pefile==2018.8.8
-Pygments==2.3.1
+Pygments==2.7.4
 PyInstaller==3.3.1
 pypiwin32==223
 PySocks==1.6.8
