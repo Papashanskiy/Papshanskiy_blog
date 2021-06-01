@@ -43,7 +43,7 @@ style==1.1.0
 telebot==0.0.3
 typing==3.6.6
 update==0.0.1
-urllib3==1.23
+urllib3==1.26.5
 virtualenv==16.2.0
 virtualenvwrapper-win==1.2.5
 visitor==0.1.3
