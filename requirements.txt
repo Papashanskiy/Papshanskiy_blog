@@ -24,7 +24,7 @@ idna==2.7
 itsdangerous==0.24
 Jinja2==2.9.6
 macholib==1.11
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 mysql-connector-python==8.0.13
 pefile==2018.8.8
